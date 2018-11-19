@@ -1,0 +1,180 @@
+﻿<Page x:Class="WpfApp1.ServicePersonSetService"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+      xmlns:HamburgerMenu="clr-namespace:HamburgerMenu;assembly=HamburgerMenu"
+      mc:Ignorable="d" 
+      d:DesignHeight="610" d:DesignWidth="995"
+      Title="serviceperson" Width="975" Height="582">
+
+    <Grid RenderTransformOrigin="0.495,0.521">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform ScaleY="1" ScaleX="1"/>
+                <SkewTransform AngleY="0" AngleX="0"/>
+                <RotateTransform Angle="0"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="276*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="64*"/>
+            <ColumnDefinition Width="263*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="isaac_benhesed_249427_jpg" Grid.ColumnSpan="2" Margin="50,0,0,0" Grid.Row="1" Source="isaac-benhesed-249427.jpg" Stretch="Fill"/>
+        <materialDesign:ColorZone Padding="16" Mode="PrimaryDark" Grid.ColumnSpan="2" Height="58">
+            <DockPanel >
+                <!--<materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges">
+                    <ListBox>
+                        <ListBoxItem Content="Hello World"/>
+                        <ListBoxItem Content="Nice Popup"/>
+                        <ListBoxItem Content="Goodbye."/>
+                    </ListBox>
+                </materialDesign:PopupBox>-->
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="430,0,0,0" VerticalAlignment="Center"><Run Text="Service office"/></TextBlock>
+                </StackPanel>
+            </DockPanel>
+        </materialDesign:ColorZone>
+
+        <!--Menu-->
+        <HamburgerMenu:HamburgerMenu Background="#FF616161" MenuIconColor="White" SelectionIndicatorColor="White" MenuItemForeground="White" HorizontalAlignment="Left"/>
+        <HamburgerMenu:HamburgerMenu Background="#FF616161" MenuIconColor="White" SelectionIndicatorColor="White" MenuItemForeground="White" HorizontalAlignment="Left" Grid.RowSpan="2">
+            <HamburgerMenu:HamburgerMenuItem  Text="Your Service" SelectionCommand="{Binding ElementName=this_}" Selected="Service_Selected"/>
+            <HamburgerMenu:HamburgerMenuItem  Text="My appointment" Selected="Appointment_Selected"/>
+            <HamburgerMenu:HamburgerMenuItem  Text="My Profile" Selected="Profile_Selected"/>
+            <HamburgerMenu:HamburgerMenuItem  Text="About Us" Selected="About_Selected"/>
+        </HamburgerMenu:HamburgerMenu>
+
+        <!--Add Product Grid-->
+        <Grid x:Name="addProductGrid" Visibility="Visible" Grid.Column="1" Grid.Row="1">
+            <Label Content="Set up your service" HorizontalAlignment="Left" Margin="153,52,0,0" FontSize="24" VerticalAlignment="Top" Height="43" Width="232"/>
+            <Label Content="Service name:" FontSize="12" HorizontalAlignment="Left" Margin="80,129,0,0" VerticalAlignment="Top" Width="92" Height="26"/>
+
+            <Label x:Name="serviceNameMess" Content="Field required" Visibility="Collapsed" Foreground="Red" FontSize="10" HorizontalAlignment="Left" Margin="407,131,0,0" VerticalAlignment="Top" Width="92" Height="26"/>
+            <Label x:Name="addedMess" Content="Location added" Visibility="Collapsed" Foreground="Green" FontSize="10" HorizontalAlignment="Left" Margin="230,326,0,0" VerticalAlignment="Top" Width="92" Height="26"/>
+
+            <TextBox x:Name="productName" FontSize="12" HorizontalAlignment="Left" Height="23" Margin="193,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194"/>
+
+            <Grid x:Name="GeneralLocationGrid" Visibility="Visible">
+                <Label x:Name="generalPlaceMess" Content="Please choose a location" Visibility="Collapsed" Foreground="Red" FontSize="10" HorizontalAlignment="Left" Margin="354,223,0,0" VerticalAlignment="Top" Width="123" Height="26"/>
+                <Label Content="Choose a location:" FontSize="12" HorizontalAlignment="Left" Margin="81,221,0,0" VerticalAlignment="Top" Width="108" Height="27" RenderTransformOrigin="0.583,0.296"/>
+                <ComboBox ItemsSource="{Binding servicePerson}" x:Name="generalLocationBox"
+                    materialDesign:HintAssist.Hint="Location"
+                    Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="194,208,453,279" Height="40" DropDownOpened="location_open"/>
+            </Grid>
+
+            <Grid x:Name="newLocationGrid" Visibility="Collapsed">
+                <Label x:Name="newPlaceMess" Content="Field required" Visibility="Collapsed" Foreground="Red" FontSize="10" HorizontalAlignment="Left" Margin="439,225,0,0" VerticalAlignment="Top" Width="74" Height="26"/>
+                <Label x:Name="dublicateMess" Content="Location already exist" Visibility="Collapsed" Foreground="Red" FontSize="10" HorizontalAlignment="Left" Margin="439,225,0,0" VerticalAlignment="Top" Width="74" Height="26"/>
+
+                <Label FontSize="12" Content="New Location:" HorizontalAlignment="Left" Margin="78,223,0,0" VerticalAlignment="Top" Width="101" Height="31"/>
+                <TextBox x:Name="newPlaceBox" FontSize="12" HorizontalAlignment="Left" Height="31" Margin="196,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" materialDesign:HintAssist.Hint="Place"/>
+                <TextBox x:Name="newRoomBox" FontSize="12" HorizontalAlignment="Left" Height="31" Margin="309,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" materialDesign:HintAssist.Hint="Room"/>
+            </Grid>
+
+            <RadioButton Content="General Location" IsChecked="True" HorizontalAlignment="Left" Height="23" Margin="86,178,0,0" VerticalAlignment="Top" Width="114" Checked="GeneralLocation_Checked" />
+            <RadioButton Content="New Location" HorizontalAlignment="Left" Height="23" Margin="244,178,0,0" VerticalAlignment="Top" Width="103" Checked="NewLocation_Checked" />
+
+            <Label Content="Duration:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="77,270,0,0"/>
+            <Label x:Name="label" Content="Hour" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="230,270,0,0"/>
+            <Label x:Name="label2" Content="Minute" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="361,270,0,0"/>
+
+            <ComboBox x:Name="hourBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="61" Margin="153,268,0,0">
+                <ComboBoxItem IsSelected="True">1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+                <ComboBoxItem>3</ComboBoxItem>
+            </ComboBox>
+            <ComboBox x:Name="minuteBox" Margin="286,268,437,231.2">
+                <ComboBoxItem IsSelected="True">00</ComboBoxItem>
+                <ComboBoxItem>15</ComboBoxItem>
+                <ComboBoxItem>30</ComboBoxItem>
+                <ComboBoxItem>45</ComboBoxItem>
+            </ComboBox>
+
+            <Button x:Name="productButton" Content="Add" HorizontalAlignment="Left" Height="30" Margin="193,340,0,0" VerticalAlignment="Top" Width="105" Click="productButton_Click"/>
+            <Image x:Name="back_icon" Grid.Column="1" Margin="10,10,732,475" Grid.Row="1" Source="back-logo-icon-27727.png" Stretch="Fill" MouseDown="back_icon_MouseDown"/>
+            <Label x:Name="productAddedMess" Content="Product added" FontSize="14" Visibility="Collapsed" Foreground="Green" HorizontalAlignment="Left" Margin="193,388,0,0" VerticalAlignment="Top" Width="114" Height="36"/>
+        </Grid>
+
+        <!--Add Time Grid-->
+        <Grid x:Name="addTimeGrid" Visibility="Collapsed" Grid.Column="1" Grid.Row="1">
+            <Label Content="Set up your time" FontSize="24" HorizontalAlignment="Left" Height="51" Margin="177,52,0,0" VerticalAlignment="Top" Width="208"/>
+            <Label Visibility="Collapsed" FontSize="12"  x:Name="dateMess" Content="Date not available!!" Foreground="Red" HorizontalAlignment="Left" Margin="72,167,0,0" VerticalAlignment="Top" Height="26"/>
+            <Image x:Name="back_icon_1" Grid.Column="1" Margin="10,10,732,475" Grid.Row="1" Source="back-logo-icon-27727.png" Stretch="Fill" MouseDown="back_icon_1_MouseDown"/>
+            <DatePicker x:Name="date" FontSize="14" Width="132" Margin="77,133,0,365" HorizontalAlignment="Left" materialDesign:HintAssist.Hint="Pick Date" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" SelectedDateChanged="DatePicker_SelectedDateChanged" />
+            <materialDesign:TimePicker x:Name="startTime" FontSize="14" Width="165" Margin="77,232,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" materialDesign:HintAssist.Hint="Choose your start time" Style="{StaticResource MaterialDesignFloatingHintTimePicker}" />
+            <materialDesign:TimePicker x:Name="endTime" FontSize="14" Width="165" Margin="292,232,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" materialDesign:HintAssist.Hint="Choose your end time" Style="{StaticResource MaterialDesignFloatingHintTimePicker}" />
+            <Button x:Name="timeProduct" Content="Add" HorizontalAlignment="Left" Height="30" Margin="222,303,0,0" VerticalAlignment="Top" Width="105" Click="TimeButton_Click"/>
+            <Label FontSize="12" Content="Your choosen time will be automatically adjusted by the system" HorizontalAlignment="Left" Height="29" Margin="72,203,0,0" VerticalAlignment="Top" Width="347"/>
+            <Label x:Name="timeMess" FontSize="12" Visibility="Collapsed" Content="Please choose your time!!" Foreground="Red"  HorizontalAlignment="Left" Height="29" Margin="72,269,0,0" VerticalAlignment="Top" Width="148"/>
+            <Label x:Name="timeCompareMess" FontSize="12" Visibility="Collapsed" Content="Choosen times not compatible!! " Foreground="Red"  HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="250" Margin="72,269,0,0"/>
+            <Label x:Name="timeAddedMess" FontSize="14" Visibility="Collapsed" Content="Your time added" Foreground="Green" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="38" VerticalAlignment="Top" Width="120" Margin="215,354,0,0"/>
+
+        </Grid>
+
+        <!--Choose Grid-->
+        <Grid Visibility="Collapsed" x:Name="ChooseGrid" Grid.Column="1" Grid.Row="1">
+            <Label Content="What do you want to see?" FontSize="24" HorizontalAlignment="Left" Margin="197,78,0,0" VerticalAlignment="Top"/>
+            <Button Content="Service Product" FontSize="20" HorizontalAlignment="Left" Height="88" Margin="48,154,0,0" VerticalAlignment="Top" Width="251" Click="Product_Click"/>
+            <Button Content="Service Time" FontSize="20" HorizontalAlignment="Left" Height="88" Margin="371,154,0,0" VerticalAlignment="Top" Width="251" Click="Time_Click"/>
+        </Grid>
+
+        <!--Product Grid-->
+        <Grid Visibility="Collapsed" x:Name="productGrid" Grid.Column="1" HorizontalAlignment="Left" Height="527" Grid.Row="1" VerticalAlignment="Top" Width="784">
+            <Label Content="Your Product" FontSize="24" HorizontalAlignment="Left" Height="44" Margin="66,52,0,0" VerticalAlignment="Top" Width="152"/>
+
+            <DataGrid x:Name="productDataGrid" HorizontalAlignment="Left" Height="290" Margin="20,108,0,0" VerticalAlignment="Top" Width="611"
+                    ItemsSource="{Binding Product, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" CanUserAddRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding ID}" Header="ID" FontWeight="Bold"/>
+                    <DataGridTextColumn Binding="{Binding ProductName}" Header="Category" FontWeight="Bold"/>
+                    <DataGridTextColumn Binding="{Binding Duration}" Header="Service Person" FontWeight="Bold"/>
+                    <DataGridTextColumn Binding="{Binding Place}" Header="Place" FontWeight="Bold"/>
+                    <!--Radio Button-->
+                    <DataGridTemplateColumn Header="Select">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <RadioButton HorizontalAlignment="Center" GroupName="Test" IsChecked="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Content="Add" HorizontalAlignment="Left" Height="29" Margin="98,427,0,0" VerticalAlignment="Top" Width="101" Click="AddProduct_Click"/>
+            <Image Margin="10,10,734,475" Source="back-logo-icon-27727.png" Stretch="Fill" MouseDown="back_icon_MouseDown"/>
+
+        </Grid>
+
+        <!--Time Grid-->
+        <Grid Visibility="Collapsed" x:Name="timeGrid" Grid.Column="1" HorizontalAlignment="Left" Height="527" Grid.Row="1" VerticalAlignment="Top" Width="784">
+            <Label Content="Your Time" FontSize="24" HorizontalAlignment="Left" Height="44" Margin="47,57,0,0" VerticalAlignment="Top" Width="152"/>
+
+            <DataGrid x:Name="timeDataGrid" HorizontalAlignment="Left" Height="271" Margin="26,117,0,0" VerticalAlignment="Top" Width="526"
+                    ItemsSource="{Binding Time, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" CanUserAddRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding IDs}" Width="50" Header="ID" FontWeight="Bold"/>
+                    <DataGridTextColumn Binding="{Binding Date}" Width="150" Header="Date" FontWeight="Bold"/>
+                    <DataGridTextColumn Binding="{Binding StartTimes}" Width="250" Header="Time" FontWeight="Bold"/>
+                    <!--Radio Button-->
+                    <DataGridTemplateColumn Header="Select">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <RadioButton HorizontalAlignment="Center" GroupName="Test" IsChecked="{Binding Selected, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Content="Add" HorizontalAlignment="Left" Height="28" Margin="98,420,0,0" VerticalAlignment="Top" Width="101" Click="AddTime_Click"/>
+            <Image Margin="10,10,732,475" Source="back-logo-icon-27727.png" Stretch="Fill" MouseDown="back_icon_1_MouseDown"/>
+        </Grid>
+    </Grid>
+</Page>

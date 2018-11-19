@@ -1,0 +1,56 @@
+﻿<Page x:Class="WpfApp1.register"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="register" Background="#F8F0FB" Height="610" Width="981">
+
+    <Grid>
+        <Frame x:Name="frame" HorizontalAlignment="Left" Height="610" VerticalAlignment="Top" Width="981"/>
+        <Image Source="demo.jpg" Stretch="Fill"/>
+        <Image Margin="106,118,861,478" Source="account-circle.png" Stretch="Fill" RenderTransformOrigin="-2.273,1.238" Width="14" Height="14"/>
+        <Image Margin="106,174,861,422" Source="lock-reset.png" Stretch="Fill" RenderTransformOrigin="-2.273,1.238" Width="14" Height="14"/>
+
+        <Label Content="Username:" HorizontalAlignment="Left" Margin="154,110,0,0" VerticalAlignment="Top"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="154,165,0,0" VerticalAlignment="Top"/>
+        <Label Content="Confirm Password:" HorizontalAlignment="Left" Margin="154,214,0,0" VerticalAlignment="Top"/>
+        <Label Content="Real Name:" HorizontalAlignment="Left" Margin="154,266,0,0" VerticalAlignment="Top"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="154,316,0,0" VerticalAlignment="Top"/>
+        <!--Special label-->
+        <Label x:Name="shortMessage" Content="Your Username is too short!!" HorizontalAlignment="Left" Margin="413,110,0,0" VerticalAlignment="Top" Foreground="Red" Visibility="Collapsed"/>
+        <Label x:Name="OkMessage"  Content="Ok!" HorizontalAlignment="Left" Margin="413,110,0,0" VerticalAlignment="Top" Foreground="Green" Visibility="Collapsed"/>
+        <Label x:Name="passMatchMessage"  Content="Confirm Password did not match!!" HorizontalAlignment="Left" Margin="413,214,0,0" VerticalAlignment="Top" Foreground="Red" Visibility="Collapsed"/>
+        <Label x:Name="usernameRequiredMess"  Content="Required field" HorizontalAlignment="Left" Margin="413,110,0,0" VerticalAlignment="Top" Foreground="Red" Visibility="Collapsed"/>
+        <Label x:Name="passwordRequiredMess"  Content="Required field" HorizontalAlignment="Left" Margin="413,165,0,0" VerticalAlignment="Top" Foreground="Red" Visibility="Collapsed"/>
+        <Label x:Name="emailRequiredMess"  Content="Required field" HorizontalAlignment="Left" Margin="413,316,0,0" VerticalAlignment="Top" Foreground="Red" Visibility="Collapsed"/>
+        <Label x:Name="usernameCheckMess"  Content="Username currently not available!" HorizontalAlignment="Left" Margin="413,110,0,0" VerticalAlignment="Top" Foreground="Red" Visibility="Collapsed"/>
+        <Label x:Name="registeredMess" FontSize="14"  Content="Your account has successfully registered" HorizontalAlignment="Left" Margin="148,411,0,0" VerticalAlignment="Top" Foreground="Green" Visibility="Collapsed" Width="262" Height="35" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.071"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <!--Elements-->
+        <TextBox x:Name="usernameBox" HorizontalAlignment="Left" Height="24" Margin="277,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.458,2.417" TextChanged="usernameBox_TextChanged"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="278,158,0,0" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="retypePass" HorizontalAlignment="Left" Margin="277,207,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="nameBox" HorizontalAlignment="Left" Height="24" Margin="277,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.458,2.417"/>
+        <TextBox x:Name="emailBox" HorizontalAlignment="Left" Height="24" Margin="278,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <Image Margin="105,271,860,323" Source="account-card-details.png" Stretch="Fill" />
+        <Image Margin="105,321,859,271" Source="email.png" Stretch="Fill"/>
+        <Label Content="Register&#xA;" FontSize="24" Foreground="#FF7AA095" HorizontalAlignment="Left" Margin="231,43,0,0" VerticalAlignment="Top" Height="45"/>
+        <Button Content="Sign up" HorizontalAlignment="Left" Margin="231,365,0,0" VerticalAlignment="Top" Width="86" Click="SignUp"/>
+        <Image Margin="105,220,862,376" Source="lock-reset.png" Stretch="Fill" RenderTransformOrigin="-2.273,1.238" Width="14" Height="14"/>
+        <Image Source="back-logo-icon-27727.png" Margin="26,26,917,548" MouseLeftButtonDown="Back_MouseDown" />
+
+    </Grid>
+</Page>

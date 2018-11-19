@@ -1,0 +1,18 @@
+Client:
++ Booking DONE
++ Your Appoinment DONE ((optional)chua co cancel)
++ Your Profile DONE
++ About Us DONE
+
+Service Person:
++ Your Service : Your Product SAPDONE, Your Time DONE
++ Your Appointment DONE
++ Your Profile DONE
++ About Us DONE
+
+Admin:
++ Add Place NONE
++ Users NONE 
++ Appointments (nhinf dduowjc cacs appointment) DONE
++ Your Profile DONE
++ About Us DONE

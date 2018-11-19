@@ -1,0 +1,112 @@
+﻿<Page x:Class="WpfApp1.AdminProfile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:HamburgerMenu="clr-namespace:HamburgerMenu;assembly=HamburgerMenu"
+      xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="610" d:DesignWidth="995"
+      Title="myappoiment" Width="975" Height="582">
+
+    <Grid RenderTransformOrigin="0.495,0.521">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform ScaleY="1" ScaleX="1"/>
+                <SkewTransform AngleY="0" AngleX="0"/>
+                <RotateTransform Angle="0"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="276*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="64*"/>
+            <ColumnDefinition Width="263*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="isaac_benhesed_249427_jpg" Grid.ColumnSpan="2" Margin="50,0,0,0" Grid.Row="1" Source="isaac-benhesed-249427.jpg" Stretch="Fill"/>
+        <materialDesign:ColorZone Padding="16" Mode="PrimaryDark" Grid.ColumnSpan="2" Height="58">
+            <DockPanel >
+                <!--<materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges">
+                    <ListBox>
+                        <ListBoxItem Content="Hello World"/>
+                        <ListBoxItem Content="Nice Popup"/>
+                        <ListBoxItem Content="Goodbye."/>
+                    </ListBox>
+                </materialDesign:PopupBox>-->
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="430,0,0,0" VerticalAlignment="Center"><Run Text="Booking office"/></TextBlock>
+                </StackPanel>
+            </DockPanel>
+        </materialDesign:ColorZone>
+
+        <!--Menu-->
+        <HamburgerMenu:HamburgerMenu Background="#FF616161" MenuIconColor="White" SelectionIndicatorColor="White" MenuItemForeground="White" HorizontalAlignment="Left"/>
+        <HamburgerMenu:HamburgerMenu Background="#FF616161" MenuIconColor="White" SelectionIndicatorColor="White" MenuItemForeground="White" HorizontalAlignment="Left" Grid.RowSpan="2">
+            <HamburgerMenu:HamburgerMenuItem  Text="My Profile" SelectionCommand="{Binding ElementName=this_}" Selected="Profile_Selected"/>
+            <HamburgerMenu:HamburgerMenuItem  Text="Users" Selected="Users_Selected"/>
+            <HamburgerMenu:HamburgerMenuItem  Text="Service Place" Selected="ServicePlace_Selected"/>
+            <HamburgerMenu:HamburgerMenuItem  Text="Appointments" Selected="Appointment_Selected"/>
+            <HamburgerMenu:HamburgerMenuItem  Text="About Us" Selected="About_Selected"/>
+        </HamburgerMenu:HamburgerMenu>
+
+        <Grid x:Name="profileGrid" Visibility="Visible" Grid.Column="1" Grid.Row="1">
+            <!--Icons-->
+            <Image Margin="84,139,684,372" Source="account-circle.png" Stretch="Fill" RenderTransformOrigin="-2.273,1.238" Grid.Row="1" Grid.Column="1" Height="16"/>
+            <Image Margin="84,195,684,316" Source="account-card-details.png" Stretch="Fill" Height="16" Width="16" />
+            <Image Margin="84,251,684,260" Source="email.png" Stretch="Fill" Width="16" Height="16"/>
+            <!--Labels-->
+            <Label FontSize="24" Content="Your Profile" HorizontalAlignment="Left" Margin="84,65,0,0" VerticalAlignment="Top" Height="49" Width="155"/>
+            <Label x:Name="editLabel" Visibility="Collapsed" FontSize="20" Content="Edit your profile" HorizontalAlignment="Left" Margin="84,80,0,0" VerticalAlignment="Top" Height="34" Width="120"/>
+
+            <Label FontSize="14" Content="Username:" HorizontalAlignment="Left" Margin="105,135,0,0" VerticalAlignment="Top" Height="34" Width="100"/>
+            <Label FontSize="14" Content="Real Name:" HorizontalAlignment="Left" Margin="105,188,0,0" VerticalAlignment="Top" Height="34" Width="100"/>
+            <Label FontSize="14" Content="Email:" HorizontalAlignment="Left" Margin="105,244,0,0" VerticalAlignment="Top" Height="34" Width="100"/>
+            <!--Errors Mess-->
+            <Label x:Name="usernameMess" Visibility="Collapsed" FontSize="12" Content="Required field" Foreground="Red" HorizontalAlignment="Left" Margin="433,137,0,0" VerticalAlignment="Top" Height="34" Width="100"/>
+            <Label x:Name="shortMess" Visibility="Collapsed" FontSize="12" Content="Your Username is too short!!" Foreground="Red" HorizontalAlignment="Left" Margin="433,137,0,0" VerticalAlignment="Top" Height="34" Width="100"/>
+            <Label x:Name="okMess" Visibility="Collapsed" FontSize="12" Content="OK!" Foreground="Green" HorizontalAlignment="Left" Margin="433,137,0,0" VerticalAlignment="Top" Height="34" Width="100"/>
+            <Label x:Name="nameMess" Visibility="Collapsed" FontSize="12" Content="Required field" Foreground="Red" HorizontalAlignment="Left" Margin="433,193,0,0" VerticalAlignment="Top" Height="34" Width="100"/>
+            <Label x:Name="emailMess" Visibility="Collapsed" FontSize="12" Content="Required field" Foreground="Red" HorizontalAlignment="Left" Margin="433,249,0,0" VerticalAlignment="Top" Height="34" Width="100"/>
+            <!--Textboxes-->
+            <TextBox x:Name="usernameBox" IsReadOnly="True" HorizontalAlignment="Left" Height="34" Margin="210,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" RenderTransformOrigin="0.458,2.417" DataContextChanged="usernameBox_DataContextChanged"/>
+            <TextBox x:Name="nameBox" IsReadOnly="True" HorizontalAlignment="Left" Height="34" Margin="210,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" RenderTransformOrigin="0.458,2.417"/>
+            <TextBox x:Name="emailBox" IsReadOnly="True" HorizontalAlignment="Left" Height="34" Margin="210,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201"/>
+
+            <Button x:Name="editButton" Content="Edit your profile" HorizontalAlignment="Left" Margin="93,322,0,0" VerticalAlignment="Top" Width="146" Click="EditProfile"/>
+            <Button x:Name="passButton" Content="Change Password" HorizontalAlignment="Left" Margin="265,322,0,0" VerticalAlignment="Top" Width="146" Click="ChangePassword"/>
+            <Button x:Name="saveButton" Visibility="Collapsed" Content="Save" HorizontalAlignment="Left" Margin="265,322,0,0" VerticalAlignment="Top" Width="99" Click="Save_Clicked" Height="32"/>
+            <Label x:Name="cancelLabel" Visibility="Collapsed" FontSize="16" Foreground="Gray" Content="Cancel" HorizontalAlignment="Left" Margin="104,322,0,0" VerticalAlignment="Top" Height="34" Width="100" MouseLeftButtonDown="Cancel_Clicked" />
+        </Grid>
+
+        <Grid x:Name="passwordGrid" Visibility="Collapsed" Grid.Column="1" Grid.Row="1">
+            <!--currentPasswordBox-->
+            <Image Margin="84,149,684,362" Source="lock-reset.png" Stretch="Fill" RenderTransformOrigin="-2.273,1.238" Width="16" Height="16"/>
+            <Label FontSize="14" Content="Current Password:" HorizontalAlignment="Left" Margin="105,141,0,0" VerticalAlignment="Top" Height="34" Width="126"/>
+            <PasswordBox x:Name="currentPassBox" HorizontalAlignment="Left" Margin="236,131,0,0" VerticalAlignment="Top" Width="151" Height="34"/>
+            <!--passwordBox-->
+            <Image Margin="84,197,684,314" Source="lock-reset.png" Stretch="Fill" RenderTransformOrigin="-2.273,1.238" Width="16" Height="16"/>
+            <Label FontSize="14" Content="Password:" HorizontalAlignment="Left" Margin="105,189,0,0" VerticalAlignment="Top" Height="34" Width="113"/>
+            <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="236,179,0,0" VerticalAlignment="Top" Width="151" Height="34"/>
+            <!--retypePassBox-->
+            <Image Margin="84,246,684,265" Source="lock-reset.png" Stretch="Fill" RenderTransformOrigin="-2.273,1.238" Width="16" Height="16"/>
+            <Label FontSize="14" Content="Retype Password:" HorizontalAlignment="Left" Margin="105,239,0,0" VerticalAlignment="Top" Height="34" Width="113"/>
+            <PasswordBox x:Name="retypePassBox" HorizontalAlignment="Left" Margin="236,225,0,0" VerticalAlignment="Top" Width="151" Height="34"/>
+
+            <Label x:Name="passMess" Visibility="Collapsed" Foreground="Red" FontSize="12" Content="Field required" HorizontalAlignment="Left" Margin="410,189,0,0" VerticalAlignment="Top" Height="34" Width="112"/>
+            <Label x:Name="retypeMess" Visibility="Collapsed" Foreground="Red" FontSize="12" Content="Field required" HorizontalAlignment="Left" Margin="410,239,0,0" VerticalAlignment="Top" Height="34" Width="112" RenderTransformOrigin="-0.763,2.441"/>
+            <Label x:Name="passErrorMess" Visibility="Collapsed" Foreground="Red" FontSize="12" Content="Password did not match!!" HorizontalAlignment="Left" Margin="419,239,0,0" VerticalAlignment="Top" Height="34" Width="158"/>
+            <Label x:Name="passChangedMess" Visibility="Collapsed" Foreground="Green" FontSize="12" Content="Your password changed" HorizontalAlignment="Left" Margin="236,273,0,0" VerticalAlignment="Top" Height="34" Width="140"/>
+            <Label x:Name="currentPassMess" Visibility="Collapsed" Foreground="Red" FontSize="12" Content="Current password not correct" HorizontalAlignment="Left" Margin="410,141,0,0" VerticalAlignment="Top" Height="34" Width="167" RenderTransformOrigin="-0.763,2.441"/>
+
+            <Label FontSize="24" Content="Change your Password" HorizontalAlignment="Left" Margin="84,83,0,0" VerticalAlignment="Top" Height="43" Width="268"/>
+            <Button x:Name="savePassButton" Visibility="Visible" Content="Confirm" HorizontalAlignment="Left" Margin="253,312,0,0" VerticalAlignment="Top" Width="99" Click="savePassButton_Click" Height="32"/>
+            <Label x:Name="cancelPassLabel" Visibility="Visible" FontSize="16" Foreground="Gray" Content="Cancel" HorizontalAlignment="Left" Margin="118,312,0,0" VerticalAlignment="Top" Height="34" Width="100" MouseLeftButtonDown="cancelPassLabel_MouseLeftButtonDown" />
+        </Grid>
+    </Grid>
+</Page>

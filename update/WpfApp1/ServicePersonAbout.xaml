@@ -1,0 +1,62 @@
+﻿<Page x:Class="WpfApp1.ServicePersonAbout"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      xmlns:HamburgerMenu="clr-namespace:HamburgerMenu;assembly=HamburgerMenu"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="582" d:DesignWidth="975"
+      Title="About">
+
+    <Grid>
+        <Grid RenderTransformOrigin="0.495,0.521">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="29*"/>
+                <RowDefinition Height="276*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="64*"/>
+                <ColumnDefinition Width="263*"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="isaac_benhesed_249427_jpg" Grid.ColumnSpan="2" Margin="50,0,0,0" Grid.Row="1" Source="isaac-benhesed-249427.jpg" Stretch="Fill"/>
+            <materialDesign:ColorZone Padding="16" Mode="PrimaryDark" Grid.ColumnSpan="2" Height="58">
+                <DockPanel >
+                    <!--<materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges">
+                        <ListBox>
+                            <ListBoxItem Content="Hello World"/>
+                            <ListBoxItem Content="Nice Popup"/>
+                            <ListBoxItem Content="Goodbye."/>
+                        </ListBox>
+                    </materialDesign:PopupBox>-->
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="430,0,0,0" VerticalAlignment="Center"><Run Text="Booking office"/></TextBlock>
+                    </StackPanel>
+                </DockPanel>
+            </materialDesign:ColorZone>
+            <!--Menu-->
+            <HamburgerMenu:HamburgerMenu Background="#FF616161" MenuIconColor="White" SelectionIndicatorColor="White" MenuItemForeground="White" HorizontalAlignment="Left"/>
+            <HamburgerMenu:HamburgerMenu Background="#FF616161" MenuIconColor="White" SelectionIndicatorColor="White" MenuItemForeground="White" HorizontalAlignment="Left" Grid.RowSpan="2">
+                <HamburgerMenu:HamburgerMenuItem  Text="About Us" SelectionCommand="{Binding ElementName=this_}" Selected="About_Selected"/>
+                <HamburgerMenu:HamburgerMenuItem  Text="Your Service"  Selected="Service_Selected"/>
+                <HamburgerMenu:HamburgerMenuItem  Text="Your appointment" Selected="Appointment_Selected"/>
+                <HamburgerMenu:HamburgerMenuItem  Text="Your Profile" Selected="Profile_Selected"/>
+            </HamburgerMenu:HamburgerMenu>
+            <Label Content="About us" FontSize="24" Grid.Column="1" HorizontalAlignment="Left" Margin="113,118,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108"/>
+            <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Version: 1.0.0&#xA;Language: English&#xA;&#xA;ADNA Team:&#xA;Duc Pham, Nguyen Tran, An Pham, Anh Le&#xA;&#xA;© LAMKBooking&#xA;" FontSize="16" Grid.Column="1" HorizontalAlignment="Left" Margin="35,199,0,0" Grid.Row="1" VerticalAlignment="Top" Height="187" Width="342"/>
+            <Image Grid.Column="1" Margin="200,391,536,88" Grid.Row="1" Source="windows.png" Stretch="Fill"/>
+            <Image Grid.Column="1" Margin="122,391,614,88" Grid.Row="1" Source="instagram.png" Stretch="Fill"/>
+            <Image Margin="45,391,691,88" Grid.Row="1" Source="facebook-box.png" Stretch="Fill" Grid.Column="1"/>
+            <Image Grid.Column="1" Margin="276,391,460,88" Grid.Row="1" Source="github-circle.png" Stretch="Fill"/>
+        </Grid>
+    </Grid>
+</Page>

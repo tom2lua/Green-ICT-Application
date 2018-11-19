@@ -1,0 +1,52 @@
+﻿<Page x:Class="WpfApp1.WelcomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="WelcomePage" Width="975" Height="582">
+
+    <Grid>
+        <Grid RenderTransformOrigin="0.495,0.521">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="29*"/>
+                <RowDefinition Height="276*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="64*"/>
+                <ColumnDefinition Width="263*"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="isaac_benhesed_249427_jpg" Grid.ColumnSpan="2" Grid.Row="1" Source="welcomefinal.jpg" Stretch="Fill"/>
+            <materialDesign:ColorZone Padding="16" Mode="PrimaryDark" Grid.ColumnSpan="2" Height="58">
+                <DockPanel >
+                    <materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges">
+                        <ListBox>
+                            <ListBoxItem Content="Hello World"/>
+                            <ListBoxItem Content="Nice Popup"/>
+                            <ListBoxItem Content="Goodbye."/>
+                        </ListBox>
+                    </materialDesign:PopupBox>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="430,0,0,0" VerticalAlignment="Center"><Run Text="Booking office"/></TextBlock>
+                    </StackPanel>
+                </DockPanel>
+            </materialDesign:ColorZone>
+
+            <Label x:Name="nameLabel" Content="" Margin="43,184,385,292" FontSize="28" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.499,0.477" Grid.Row="1" Width="547" Grid.ColumnSpan="2"/>
+            <Button Content="Click to begin" Grid.Column="1" HorizontalAlignment="Left" Margin="60,325,0,0" Grid.Row="1" VerticalAlignment="Top" Width="130" Click="Click"/>
+            <Rectangle Grid.Column="1" Fill="#FFBF6767" HorizontalAlignment="Left" Height="1" Margin="26,244,0,0" Grid.Row="1" Stroke="#FF570E0E" VerticalAlignment="Top" Width="200"/>
+        </Grid>
+        <Label Content="Looking for an appointment?" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Margin="196,326,0,0" Height="41" Width="241"/>
+    </Grid>
+</Page>

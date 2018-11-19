@@ -1,0 +1,176 @@
+E:\Work\green-ict2\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+E:\Work\green-ict2\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+E:\Work\green-ict2\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+E:\Work\green-ict2\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
+E:\Work\green-ict2\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+E:\Work\green-ict2\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+E:\Work\green-ict2\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+E:\Work\green-ict2\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+E:\Work\green-ict2\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+E:\Work\green-ict2\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+E:\Work\green-ict2\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+E:\Work\green-ict2\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
+E:\Work\green-ict2\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+E:\Work\green-ict2\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+E:\Work\green-ict2\signindemowpf\WpfApp1\bin\Debug\WpfApp1.exe.config
+E:\Work\green-ict2\signindemowpf\WpfApp1\bin\Debug\WpfApp1.exe
+E:\Work\green-ict2\signindemowpf\WpfApp1\bin\Debug\WpfApp1.pdb
+E:\Work\green-ict2\signindemowpf\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
+E:\Work\green-ict2\signindemowpf\WpfApp1\obj\Debug\MainWindow.g.cs
+E:\Work\green-ict2\signindemowpf\WpfApp1\obj\Debug\App.g.cs
+E:\Work\green-ict2\signindemowpf\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+E:\Work\green-ict2\signindemowpf\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+E:\Work\green-ict2\signindemowpf\WpfApp1\obj\Debug\MainWindow.baml
+E:\Work\green-ict2\signindemowpf\WpfApp1\obj\Debug\WpfApp1.g.resources
+E:\Work\green-ict2\signindemowpf\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+E:\Work\green-ict2\signindemowpf\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
+E:\Work\green-ict2\signindemowpf\WpfApp1\obj\Debug\WpfApp1.exe
+E:\Work\green-ict2\signindemowpf\WpfApp1\obj\Debug\WpfApp1.pdb
+E:\Work\green-ict2\signindemowpf\WpfApp1\obj\Debug\faillogin.g.cs
+E:\Work\green-ict2\signindemowpf\WpfApp1\obj\Debug\faillogin.baml
+E:\Work\green-ict2\signindemowpf\WpfApp1\bin\Debug\MaterialDesignColors.dll
+E:\Work\green-ict2\signindemowpf\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\Work\green-ict2\signindemowpf\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\Work\green-ict2\signindemowpf\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\Work\green-ict2\signindemowpf\WpfApp1\obj\Debug\App.baml
+E:\Work\green-ict2\signindemowpf\WpfApp1\obj\Debug\register.g.cs
+E:\Work\green-ict2\signindemowpf\WpfApp1\obj\Debug\register.baml
+E:\Work\green-ict2\signindemowpf\WpfApp1\obj\Debug\inside.g.cs
+E:\Work\green-ict2\signindemowpf\WpfApp1\obj\Debug\inside.baml
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\bin\Debug\MaterialDesignColors.dll
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\obj\Debug\faillogin.g.cs
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\obj\Debug\inside.g.cs
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\obj\Debug\register.g.cs
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\obj\Debug\App.g.cs
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\obj\Debug\App.baml
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\obj\Debug\faillogin.baml
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\obj\Debug\inside.baml
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\obj\Debug\register.baml
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\bin\Debug\MaterialDesignColors.pdb
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\bin\Debug\MySql.Data.dll
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\bin\Debug\MySql.Web.dll
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\bin\Debug\MySql.Data.xml
+C:\Users\GL552V\Desktop\ICT Application\signindemowpf\WpfApp1\bin\Debug\MySql.Web.xml
+C:\Users\Anh Duc\Desktop\update\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\Anh Duc\Desktop\update\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\Anh Duc\Desktop\update\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\Anh Duc\Desktop\update\WpfApp1\bin\Debug\MaterialDesignColors.dll
+C:\Users\Anh Duc\Desktop\update\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Anh Duc\Desktop\update\WpfApp1\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Anh Duc\Desktop\update\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Anh Duc\Desktop\update\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Anh Duc\Desktop\update\WpfApp1\bin\Debug\MySql.Data.xml
+C:\Users\Anh Duc\Desktop\update\WpfApp1\bin\Debug\MySql.Web.xml
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\faillogin.g.cs
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\inside.g.cs
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\register.g.cs
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\App.g.cs
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\App.baml
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\faillogin.baml
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\inside.baml
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\register.baml
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\Anh Duc\Desktop\update\WpfApp1\bin\Debug\MySql.Data.dll
+C:\Users\Anh Duc\Desktop\update\WpfApp1\bin\Debug\MySql.Web.dll
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\myappoiment.g.cs
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\myappoiment.baml
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\serviceperson.g.cs
+C:\Users\Anh Duc\Desktop\update\WpfApp1\obj\Debug\serviceperson.baml
+D:\Green ICT 2\update\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
+D:\Green ICT 2\update\WpfApp1\obj\Debug\admin.g.cs
+D:\Green ICT 2\update\WpfApp1\obj\Debug\faillogin.g.cs
+D:\Green ICT 2\update\WpfApp1\obj\Debug\MainWindow.g.cs
+D:\Green ICT 2\update\WpfApp1\obj\Debug\inside.g.cs
+D:\Green ICT 2\update\WpfApp1\obj\Debug\myappoiment.g.cs
+D:\Green ICT 2\update\WpfApp1\obj\Debug\register.g.cs
+D:\Green ICT 2\update\WpfApp1\obj\Debug\serviceperson.g.cs
+D:\Green ICT 2\update\WpfApp1\obj\Debug\App.g.cs
+D:\Green ICT 2\update\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+D:\Green ICT 2\update\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+D:\Green ICT 2\update\WpfApp1\obj\Debug\WpfApp1.exe
+D:\Green ICT 2\update\WpfApp1\obj\Debug\WpfApp1.pdb
+D:\Green ICT 2\update\WpfApp1\bin\Debug\WpfApp1.exe.config
+D:\Green ICT 2\update\WpfApp1\bin\Debug\WpfApp1.exe
+D:\Green ICT 2\update\WpfApp1\bin\Debug\WpfApp1.pdb
+D:\Green ICT 2\update\WpfApp1\bin\Debug\MaterialDesignColors.dll
+D:\Green ICT 2\update\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Green ICT 2\update\WpfApp1\bin\Debug\MySql.Data.dll
+D:\Green ICT 2\update\WpfApp1\bin\Debug\MySql.Web.dll
+D:\Green ICT 2\update\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Green ICT 2\update\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Green ICT 2\update\WpfApp1\bin\Debug\MySql.Data.xml
+D:\Green ICT 2\update\WpfApp1\bin\Debug\MySql.Web.xml
+D:\Green ICT 2\update\WpfApp1\obj\Debug\App.baml
+D:\Green ICT 2\update\WpfApp1\obj\Debug\admin.baml
+D:\Green ICT 2\update\WpfApp1\obj\Debug\faillogin.baml
+D:\Green ICT 2\update\WpfApp1\obj\Debug\MainWindow.baml
+D:\Green ICT 2\update\WpfApp1\obj\Debug\inside.baml
+D:\Green ICT 2\update\WpfApp1\obj\Debug\myappoiment.baml
+D:\Green ICT 2\update\WpfApp1\obj\Debug\register.baml
+D:\Green ICT 2\update\WpfApp1\obj\Debug\serviceperson.baml
+D:\Green ICT 2\update\WpfApp1\obj\Debug\WpfApp1.g.resources
+D:\Green ICT 2\update\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+D:\Green ICT 2\update\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
+D:\Green ICT 2\update\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\bin\Debug\MaterialDesignColors.dll
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\bin\Debug\MySql.Data.dll
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\bin\Debug\MySql.Web.dll
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\bin\Debug\MySql.Data.xml
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\bin\Debug\MySql.Web.xml
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\admin.g.cs
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\faillogin.g.cs
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\inside.g.cs
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\myappoiment.g.cs
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\register.g.cs
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\serviceperson.g.cs
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\App.g.cs
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\App.baml
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\admin.baml
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\faillogin.baml
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\inside.baml
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\myappoiment.baml
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\register.baml
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\serviceperson.baml
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\bin\Debug\MaterialDesignColors.pdb
+C:\Users\GL552V\Desktop\ICT Application\update\WpfApp1\bin\Debug\HamburgerMenu.dll

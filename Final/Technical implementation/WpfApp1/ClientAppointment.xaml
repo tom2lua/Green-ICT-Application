@@ -1,0 +1,81 @@
+﻿<Page x:Class="WpfApp1.ClientAppointment"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:HamburgerMenu="clr-namespace:HamburgerMenu;assembly=HamburgerMenu"
+      mc:Ignorable="d"
+      Title="ClientBooking" Background="#F8F0FB" Height="582" Width="975">
+
+    <Grid RenderTransformOrigin="0.495,0.521">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform ScaleY="1" ScaleX="1"/>
+                <SkewTransform AngleY="0" AngleX="0"/>
+                <RotateTransform Angle="0"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="276*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="64*"/>
+            <ColumnDefinition Width="263*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="isaac_benhesed_249427_jpg" Grid.ColumnSpan="2" Margin="50,0,0,0" Grid.Row="1" Source="isaac-benhesed-249427.jpg" Stretch="Fill"/>
+        <materialDesign:ColorZone Padding="16" Mode="PrimaryDark" Grid.ColumnSpan="2" Height="58">
+            <DockPanel >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="430,0,0,0" VerticalAlignment="Center"><Run Text="Booking office"/></TextBlock>
+                </StackPanel>
+            </DockPanel>
+        </materialDesign:ColorZone>
+
+        <!--Menu-->
+        <HamburgerMenu:HamburgerMenu Background="#FF616161" MenuIconColor="White" SelectionIndicatorColor="White" MenuItemForeground="White" HorizontalAlignment="Left"/>
+        <HamburgerMenu:HamburgerMenu Background="#FF616161" MenuIconColor="White" SelectionIndicatorColor="White" MenuItemForeground="White" HorizontalAlignment="Left" Grid.RowSpan="2">
+            <HamburgerMenu:HamburgerMenuItem Text="My appointment" SelectionCommand="{Binding ElementName=this_}" Selected="Appointment_Selected"/>
+            <HamburgerMenu:HamburgerMenuItem Text="Booking" Selected="Booking_Selected"/>
+            <HamburgerMenu:HamburgerMenuItem Text="My Profile" Selected="Profile_Selected"/>
+            <HamburgerMenu:HamburgerMenuItem Text="About Us" Selected="About_Selected"/>
+        </HamburgerMenu:HamburgerMenu>
+
+        <Grid x:Name="appointmentGrid" Grid.Column="1" Grid.Row="1">
+            <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="325" Margin="0,109,0,0" VerticalAlignment="Top" Width="751"
+                    ItemsSource="{Binding Appointment, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" CanUserAddRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding ID}" Header="ID" FontWeight="Bold"/>
+                    <DataGridTextColumn Binding="{Binding ProductName}" Header="Category" FontWeight="Bold"/>
+                    <DataGridTextColumn Binding="{Binding ServicePerson}" Header="Service Person" FontWeight="Bold"/>
+                    <DataGridTextColumn Binding="{Binding Place}" Header="Place" FontWeight="Bold"/>
+                    <DataGridTextColumn Binding="{Binding Date}" Header="Date" FontWeight="Bold"/>
+                    <DataGridTextColumn Binding="{Binding StartTime}" Header="Time Slot" FontWeight="Bold"/>
+                    <!--Radio Button-->
+                    <DataGridTemplateColumn Header="Select">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <RadioButton HorizontalAlignment="Center" GroupName="Test" IsChecked="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Button x:Name="cancelButton" Visibility="Visible" Content="Cancel" HorizontalAlignment="Left" Height="30" Margin="304,468,0,0" VerticalAlignment="Top" Width="100" Click="cancelButton_Click"/>
+            <!--<Button x:Name="modifyButton" Visibility="Visible" Content="Modify Appointment" HorizontalAlignment="Left" Height="30" Margin="368,477,0,0" VerticalAlignment="Top" Width="188" Click="modifyButton_Click" />-->
+
+            <Button x:Name="cancelcancelButton" Visibility="Collapsed" Content="Cancel" HorizontalAlignment="Left" Height="30" Margin="122,468,0,0" VerticalAlignment="Top" Width="134" Click="cancelcancelButton_Click"/>
+            <Button x:Name="confirmCancelButton" Visibility="Collapsed" Content="Confirm" HorizontalAlignment="Left" Height="30" Margin="392,468,0,0" VerticalAlignment="Top" Width="144" Click="confirmCancelButton_Click" />
+            
+            <Label x:Name="noappointmentMess" Visibility="Collapsed" Content="No appointment selected!" Foreground="Red" FontSize="14" HorizontalAlignment="Left" Height="31" Margin="100,441,0,0" VerticalAlignment="Top" Width="179"/>
+            <Label x:Name="warningMess" Visibility="Collapsed" Content="Do you really want to cancel the appointment? This action can not be undo." Foreground="Red" FontSize="14" HorizontalAlignment="Left" Height="31" Margin="100,441,0,0" VerticalAlignment="Top" Width="479"/>
+
+        </Grid>
+
+        <Label Content="My Appointment" FontWeight="Bold" FontSize="20" Grid.Column="1" HorizontalAlignment="Left" Height="43" Margin="35,61,0,0" Grid.Row="1" VerticalAlignment="Top" Width="203" Foreground="#FF7AA095"/>
+    </Grid>
+</Page>

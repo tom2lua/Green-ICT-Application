@@ -1,0 +1,97 @@
+﻿<Page x:Class="WpfApp1.ClientBooking"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:HamburgerMenu="clr-namespace:HamburgerMenu;assembly=HamburgerMenu"
+      mc:Ignorable="d"
+      Title="ClientBooking" Background="#F8F0FB" Height="582" Width="975">
+
+    <Page.Resources>
+        <CollectionViewSource x:Key="ItemCollectionViewSource"  CollectionViewType="ListCollectionView"/>
+    </Page.Resources>
+
+    <Grid RenderTransformOrigin="0.495,0.521">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform ScaleY="1" ScaleX="1"/>
+                <SkewTransform AngleY="0" AngleX="0"/>
+                <RotateTransform Angle="0"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="276*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="64*"/>
+            <ColumnDefinition Width="263*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="isaac_benhesed_249427_jpg" Grid.ColumnSpan="2" Margin="50,0,0,0" Grid.Row="1" Source="isaac-benhesed-249427.jpg" Stretch="Fill"/>
+        <materialDesign:ColorZone Padding="16" Mode="PrimaryDark" Grid.ColumnSpan="2" Height="58" Foreground="#FF7F5959">
+            <DockPanel >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="430,0,0,0" VerticalAlignment="Center" Foreground="White"><Run Text="Booking office"/></TextBlock>
+                </StackPanel>
+            </DockPanel>
+        </materialDesign:ColorZone>
+
+        <!--Menu-->
+        <HamburgerMenu:HamburgerMenu Background="#FF616161" MenuIconColor="White" SelectionIndicatorColor="White" MenuItemForeground="White" HorizontalAlignment="Left"/>
+        <HamburgerMenu:HamburgerMenu Background="#FF616161" MenuIconColor="White" SelectionIndicatorColor="White" MenuItemForeground="White" HorizontalAlignment="Left" Grid.RowSpan="2">
+            <HamburgerMenu:HamburgerMenuItem Text="Booking" SelectionCommand="{Binding ElementName=this_}" Selected="Booking_Selected"/>
+            <HamburgerMenu:HamburgerMenuItem Text="My Appointment" Selected="Appointment_Selected"/>
+            <HamburgerMenu:HamburgerMenuItem Text="My Profile" Selected="Profile_Selected"/>
+            <HamburgerMenu:HamburgerMenuItem Text="About Us" Selected="About_Selected"/>
+        </HamburgerMenu:HamburgerMenu>
+
+        <!--Product Grid-->
+        <Grid x:Name="productGrid" Visibility="Visible" x:FieldModifier="public" Grid.Column="1" Grid.Row="1">
+            <!--Labels-->
+            <Label x:Name="placeLabel" Content="Place:" HorizontalAlignment="Left" Margin="109,261,0,0" VerticalAlignment="Top" Height="42" Width="98"/>
+            <Label x:Name="catalogLabel" Content="Catalog:" HorizontalAlignment="Left" Margin="109,194,0,0" VerticalAlignment="Top" Height="42" Width="98"/>
+            <Label x:Name="personLabel" Content="Service person:" HorizontalAlignment="Left" Margin="109,128,0,0" VerticalAlignment="Top" Height="42" Width="98"/>
+            <Label x:Name="durationLabel1" Content="Duration:" HorizontalAlignment="Left" Margin="109,318,0,0" VerticalAlignment="Top" Height="42" Width="98"/>
+            <Label x:Name="durationLabel" Content="" HorizontalAlignment="Left" Margin="233,318,0,0" VerticalAlignment="Top" Height="28" Width="120" RenderTransformOrigin="0.5,0.5"/>
+
+            <!--Comboboxes-->
+            <ComboBox ItemsSource="{Binding servicePerson}" x:Name="nameBox" materialDesign:HintAssist.Hint="Name" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="233,115,389,370"  DropDownOpened="namebox_opened" DropDownClosed="namebox_closed" VerticalAlignment="Stretch" />
+            <ComboBox x:Name="productBox"  materialDesign:HintAssist.Hint="Product" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="233,181,389,304"  VerticalAlignment="Stretch"/>
+            <ComboBox x:Name="placeBox" materialDesign:HintAssist.Hint="Place" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="233,248,389,237" DropDownOpened="placeBox_opend" DropDownClosed="placeBox_closed" VerticalAlignment="Stretch"/>
+            <Button x:Name="contiButton" Content="Continue" HorizontalAlignment="Left" Margin="248,398,0,0" VerticalAlignment="Top" Width="105"  Background="#FF303030" Foreground="#FFF8F0FB" BorderBrush="#FF303030" Click="contiButton_Click"/>
+
+            <Label x:Name="nameMess" Visibility="Collapsed" Content="Field required!" Foreground="Red" HorizontalAlignment="Left" Margin="421,115,0,0" VerticalAlignment="Top" Height="42" Width="98"/>
+            <Label x:Name="productMess" Visibility="Collapsed" Content="Field required!" Foreground="Red" HorizontalAlignment="Left" Margin="421,181,0,0" VerticalAlignment="Top" Height="42" Width="98"/>
+            <Label x:Name="placeMess" Visibility="Collapsed" Content="Field required!" Foreground="Red" HorizontalAlignment="Left" Margin="421,248,0,0" VerticalAlignment="Top" Height="42" Width="98"/>
+        </Grid>
+
+        <!--Date and Time Grid-->
+        <Grid Visibility="Collapsed" x:Name="dateTimeGrid" HorizontalAlignment="Left" Height="527" VerticalAlignment="Top" Width="784" Grid.Column="1" Grid.Row="1">
+            <Label Visibility="Collapsed"  x:Name="dateMess" Content="Date not available!!" Foreground="Red" FontSize="12" HorizontalAlignment="Left" Margin="37,119,0,0" VerticalAlignment="Top"/>
+            <Image x:Name="back_icon" Grid.Column="1" Margin="10,10,732,475" Grid.Row="1" Source="back-logo-icon-27727.png" Stretch="Fill" MouseDown="back_icon_MouseDown"/>
+            <DatePicker x:Name="calendar" FontSize="14" Width="196" Margin="57,100,0,390" HorizontalAlignment="Left" SelectedDateChanged="Calendar_SelectedDatesChanged" materialDesign:HintAssist.Hint="Pick a Date" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+            <Label Visibility="Visible" Content="Pick your time, each time slot lasts for 15 minutes" Foreground="Black" FontSize="14" HorizontalAlignment="Left" Margin="50,171,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="timeSubmit" Content="Book" HorizontalAlignment="Left" Margin="185,461,0,0" VerticalAlignment="Top" Width="105"  Background="#FF303030" Foreground="#FFF8F0FB" BorderBrush="#FF303030" Click="timeSubmit_Click"/>
+            <Label x:Name="currentDuration" Visibility="Visible" Content="" Foreground="Black" FontSize="14" HorizontalAlignment="Left" Margin="280,108,0,0" VerticalAlignment="Top"/>
+
+            <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="199" Margin="43,219,0,0" VerticalAlignment="Top" Width="415"
+                      ItemsSource="{Binding Times, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" CanUserAddRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding id}" Header="ID" Width="50" FontWeight="Bold"/>
+                    <DataGridTextColumn Binding="{Binding Date}" Header="Date" Width="120" FontWeight="Bold"/>
+                    <DataGridTextColumn Binding="{Binding StartTimes}" Header="Start Time" Width="170" FontWeight="Bold"/>
+                    <DataGridCheckBoxColumn Binding="{Binding Selected}" Header="Choose"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label x:Name="noTimeMess" Visibility="Collapsed" Content="No time selected!" FontSize="12" HorizontalAlignment="Left" Margin="185,428,0,0" VerticalAlignment="Top" Height="28" Width="104" Foreground="Red"/>
+            <Label x:Name="appointmentBookedMess" Visibility="Collapsed" Content="Appointment Booked" FontSize="12" HorizontalAlignment="Left" Margin="170,428,0,0" VerticalAlignment="Top" Height="28" Width="132" Foreground="Green"/>
+        </Grid>
+        <!--<Label Foreground="White" Content="Sign Out" Grid.Column="1" HorizontalAlignment="Left" Margin="716,14,0,0" Width="58" MouseLeftButtonDown="SignOut_MouseLeftButtonDown" Height="26" VerticalAlignment="Top"/>-->
+        <Label Content="Book your appointment" FontSize="24" FontWeight="DemiBold" HorizontalAlignment="Left" Margin="37,47,0,0" Grid.Row="1" VerticalAlignment="Top" Height="57" Width="282" Grid.Column="1" Foreground="#FF7AA095"/>
+        
+    </Grid>
+
+</Page>
